@@ -2,21 +2,16 @@ import { CodePreview } from '@/components/CodePreview'
 import shiki from 'shiki'
 
 export const metadata = {
-    title: 'Gaming Setup',
+    title: 'Server Setup',
 }
 
 const markdown = `
-# My Setup
-- Windows 11 / Ubuntu (WSL)
-- AMD Ryzen 5 3400G
-- 2x Gigabyte 8GB 2666Mhz
-- 500W 80 Plus
-- HDD 1Tb
-- Kingston SSD KC600 256Gb
-- RX Vega 11 Graphics
-## Peripherals
-- LG 24" Display 5ms 1920x1080
-- LG 19,5" Display 5ms 1366x768
+# Server Setup
+- Ubuntu Server
+- AMD A4-7300 @3.8GHz
+- 2x 4GB 1600Mhz
+- HDD 500Gb
+
 That's it, nothing more.
 `.trim()
 

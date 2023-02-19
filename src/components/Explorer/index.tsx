@@ -1,4 +1,4 @@
-import { Code2, Cog, Cpu, FileJson, Film, Joystick, MoreHorizontal, Terminal } from "lucide-react";
+import { Cog, Cpu, Server, FileJson, MoreHorizontal, Terminal } from "lucide-react";
 import { File } from "./File";
 import { Folder } from "./Folder";
 
@@ -37,6 +37,10 @@ export function Explorer() {
                     <File href="/settings/others/my-setup">
                         <Cpu size={16} />
                         my.setup
+                    </File>
+                    <File href="/settings/others/server-setup" >
+                        <Server size={16} />
+                        server.setup
                     </File>
                 </Folder>
             </nav>
