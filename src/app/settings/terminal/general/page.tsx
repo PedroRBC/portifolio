@@ -7,7 +7,6 @@ export const metadata = {
 
 const markdown = `
 # General
-Currently I'm using the combo OhMyPosh in Windows and Zsh in Linux to my terminal.
 OhMyPosh: https://ohmyposh.dev
 Zsh + OhMyZsh: https://www.zsh.org + https://ohmyz.sh
 ---
