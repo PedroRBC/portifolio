@@ -10,8 +10,7 @@ const markdown = `
 OhMyPosh: https://ohmyposh.dev
 Zsh + OhMyZsh: https://www.zsh.org + https://ohmyz.sh
 ---
-I'm Also using For OhMyZsh Theme: PowerLevel10K.
-PowerLevel10K: https://github.com/romkatv/powerlevel10k
+Theme - PowerLevel10K: https://github.com/romkatv/powerlevel10k
 `.trim()
 
 export default async function General() {
