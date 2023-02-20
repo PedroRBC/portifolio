@@ -6,6 +6,7 @@ module.exports = {
       colors: {
         bg: "#040303",
       },
+      visibility: ["group-hover"],
     },
     backgroundImage: {
       app: "linear-gradient(to left, #40c9ff, #e81cff)",
@@ -14,7 +15,8 @@ module.exports = {
       layout: "2rem 1fr 1.5rem",
     },
     gridTemplateColumns: {
-      editor: "3.5rem 16rem 1fr",
+      editor: "3.5rem 1fr",
+      page: "16rem 1fr",
     },
   },
   plugins: [require("tailwind-scrollbar")],

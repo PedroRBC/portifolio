@@ -6,11 +6,11 @@ export default function DashboardLayout({
     children: React.ReactNode,
 }) {
     return (
-        <>
+        <div className='grid grid-cols-page' >
             <Explorer />
             <div className="h-full relative" >
                 {children}
             </div>
-        </>
+        </div>
     );
 }

@@ -33,11 +33,11 @@ export default async function Home() {
   const code = highlighter.codeToHtml(markdown, { lang: 'md' })
 
   return (
-    <>
+    <div className='grid grid-cols-page' >
       <ProfileMenu />
       <div className="h-full relative" >
         <CodePreview code={code} />
       </div>
-    </>
+    </div>
   )
 }
