@@ -26,6 +26,9 @@ export function Project({ desc, url, image, title }: ProjectProps) {
 
                     }} >
                     <div className="invisible group-hover:visible rounded-t-xl p-1"
+                        style={{
+                            backgroundColor: 'rgba(250, 250, 256, 0.25)'
+                        }}
                     >
                         <span  >{desc}</span>
                     </div>

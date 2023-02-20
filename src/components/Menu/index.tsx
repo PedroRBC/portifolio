@@ -19,16 +19,16 @@ export function Menu() {
     return (
         <div className="flex flex-col justify-between">
             <nav className="flex flex-col">
-                <Link href='/' >
+                <Link href='/' aria-label='Home Page' >
                     <MenuButton icon={User} isActive={ActualRoute('/')} />
                 </Link>
-                <Link href='/projects' >
+                <Link href='/projects' aria-label='Projects Page'  >
                     <MenuButton icon={FolderHeart} isActive={ActualRoute('/projects')} />
                 </Link>
             </nav>
             <div className="flex flex-col ">
                 <SocialLinksMenuButton />
-                <Link href='/settings' >
+                <Link href='/settings' aria-label='Settings Page'  >
                     <MenuButton icon={Cog} isActive={ActualRoute('/settings')} />
                 </Link>
             </div>
