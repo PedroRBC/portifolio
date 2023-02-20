@@ -12,7 +12,7 @@ export async function GistContent({ gistUrl, lang }: GistContentProps) {
 
     const highlighter = await shiki.getHighlighter({
         theme: 'rose-pine-moon',
-        langs: ["json"]
+        langs: ["json", "zsh"]
     })
 
     const code = highlighter.codeToHtml(settings, { lang })
