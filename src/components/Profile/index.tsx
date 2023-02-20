@@ -6,8 +6,8 @@ import { SkillItem } from './SkillItem';
 
 export function ProfileMenu() {
     return (
-        <div className='py-2 px-4 text-[#8F8CA8]' >
-            <div className='flex border rounded-full border-[#72707D] ' >
+        <div className='flex py-2 px-4 text-[#8F8CA8] flex-col items-center max-lg:mb-1' >
+            <div className='flex border rounded-full border-[#72707D] max-lg:w-40 ' >
                 <Image
                     src={imageProfile}
                     alt='Profile Image'

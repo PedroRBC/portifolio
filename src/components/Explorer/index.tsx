@@ -4,7 +4,7 @@ import { Folder } from "./Folder";
 
 export function Explorer() {
     return (
-        <div className="py-2 px-4 text-[#8F8CA8]">
+        <div className="py-2 px-4 text-[#8F8CA8] max-lg:mb-4 ">
             <strong className="font-medium text-xs pl-2 flex items-center justify-between">
                 EXPLORER
                 <MoreHorizontal size={16} strokeWidth={1.5} />

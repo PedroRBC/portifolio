@@ -7,7 +7,7 @@ type SkillType = {
 
 export function SkillItem({ children }: SkillType) {
 
-    return <li className="flex flex-row gap-3 items-center hover:text-cyan-200 " >
+    return <li className="flex flex-row gap-3 items-center lg:hover:text-cyan-200 " >
         {children}
     </li>
 }

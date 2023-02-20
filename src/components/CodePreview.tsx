@@ -28,7 +28,7 @@ export function CodePreview({ code, raw }: CodePreviewProps) {
                 <button
                     onClick={handleCopyToClipboard}
                     data-copied={hasCopiedToClipboard}
-                    className="absolute flex items-center right-0 mx-8 gap-x-2 text-sm font-medium z-30 bg-[#2a273f] px-3 py-2 rounded-md text-[#E0DEF2] ring-2 ring-[#2b283b] data-[copied=true]:ring-emerald-600"
+                    className="absolute flex items-center right-0 max-lg:bottom-7 max-lg:place-self-end mx-8 max-lg:mx-4 gap-x-2 text-sm font-medium z-30 bg-[#2a273f] px-3 py-2 rounded-md text-[#E0DEF2] ring-2 ring-[#2b283b] data-[copied=true]:ring-emerald-600"
                 >
                     {hasCopiedToClipboard ? (
                         <>
@@ -46,7 +46,7 @@ export function CodePreview({ code, raw }: CodePreviewProps) {
             <div
                 id="shiki-code"
                 style={jetBrainsMono.style}
-                className="absolute inset-0 overflow-auto leading-relaxed scrollbar scrollbar-thumb-[#2B283B] scrollbar-track-transparent"
+                className="absolute inset-0 overflow-auto leading-relaxed scrollbar scrollbar-thumb-[#2B283B] scrollbar-track-transparent max-lg:text-sm "
                 dangerouslySetInnerHTML={{ __html: code }}
             />
         </>

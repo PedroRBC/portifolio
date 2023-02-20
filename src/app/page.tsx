@@ -33,9 +33,9 @@ export default async function Home() {
   const code = highlighter.codeToHtml(markdown, { lang: 'md' })
 
   return (
-    <div className='grid grid-cols-page' >
+    <div className='lg:grid lg:grid-cols-page max-lg:scrollbar ' >
       <ProfileMenu />
-      <div className="h-full relative" >
+      <div className="lg:h-full relative max-lg:h-[80%] " >
         <CodePreview code={code} />
       </div>
     </div>

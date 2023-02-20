@@ -33,8 +33,8 @@ export default function RootLayout({
       */}
       <head />
       <body className='bg-bg bg-app text-white '>
-        <div className="z-10 relative h-screen p-20 flex items-center justify-center">
-          <div className="bg-[#232135] overflow-hidden border border-[#72707D] w-full max-w-[1480px] aspect-video shadow-md shadow-black/20 rounded-lg grid grid-rows-layout">
+        <div className="z-10 relative h-screen lg:p-20 max-lg:p-2 flex lg:items-center justify-center ">
+          <div className="bg-[#232135] overflow-hidden border border-[#72707D] w-full lg:max-w-[1480px] aspect-video shadow-md shadow-black/20 rounded-lg grid grid-rows-layout">
             <Header />
 
             <div className="grid grid-cols-editor max-h-full">

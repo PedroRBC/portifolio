@@ -6,7 +6,7 @@ export default function DashboardLayout({
     children: React.ReactNode,
 }) {
     return (
-        <div className='grid grid-cols-page' >
+        <div className='lg:grid lg:grid-cols-page max-lg:flex max-lg:flex-col' >
             <Explorer />
             <div className="h-full relative" >
                 {children}
