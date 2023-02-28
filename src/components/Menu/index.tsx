@@ -10,7 +10,7 @@ import { SocialLinksMenuButton } from './SocialLinksMenuButton'
 export function Menu() {
     const pathName = usePathname();
     function ActualRoute(href = '/') {
-        const isCurrentActive = pathName === href;
+        const isCurrentActive = pathName?.includes(href)
         return isCurrentActive
     }
 
