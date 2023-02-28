@@ -1,6 +1,6 @@
 import '../styles/globals.css'
 
-import { Inter } from '@next/font/google'
+import { Inter } from 'next/font/google'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -13,10 +13,19 @@ export const metadata = {
     default: 'Pedro Rodrigues',
     template: '%s | Pedro Rodrigues'
   },
+  icons: {
+    icon: '/favicon.png'
+  },
+  viewport: {
+    width: 'device-width',
+    initialScale: 1,
+    maximumScale: 1,
+  },
   robots: {
     index: true,
     follow: true,
   },
+  creator: 'Pedro Rodrigues Bueno De Caldas',
   description: "Personal page of a 17 year old student, welcome",
 }
 
