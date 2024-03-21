@@ -7,6 +7,7 @@ import { Inter } from "next/font/google";
 import React from "react";
 import { cn } from "@/lib/utils";
 import { Providers } from "@/providers";
+import Footer from "@/components/footer";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -38,7 +39,10 @@ export default function RootLayout({
           inter.className,
         )}
       >
-        <Providers>{children}</Providers>
+        <Providers>
+          {children}
+          <Footer />
+        </Providers>
       </body>
     </html>
   );
