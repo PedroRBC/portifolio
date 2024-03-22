@@ -1,11 +1,12 @@
 interface DocsConfig {
   siteName: string;
   description: string;
-  siteIcon: string;
+  avatarIcon: string;
 }
 
 export const docsConfig: DocsConfig = {
-  siteName: "PedroRbc Portfolio",
-  description: "",
-  siteIcon: "https://avatars.githubusercontent.com/u/58788062?v=4",
+  siteName: "Pedro R.",
+  description:
+    "Portfolio pessoal do Pedro, desenvolvedor e estudante de programação.",
+  avatarIcon: "https://avatars.githubusercontent.com/u/58788062?v=4",
 };
