@@ -9,6 +9,7 @@ import React from "react";
 import { cn } from "@/lib/utils";
 import { Providers } from "@/providers";
 import Footer from "@/components/footer";
+import Header from "@/components/header";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
@@ -40,6 +41,7 @@ export default function RootLayout({
         )}
       >
         <Providers>
+          <Header />
           {children}
           <Footer />
         </Providers>

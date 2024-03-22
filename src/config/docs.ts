@@ -1,7 +1,14 @@
+interface Nav {
+  title: string;
+  href: string;
+}
+
 interface DocsConfig {
   siteName: string;
   description: string;
   avatarIcon: string;
+
+  mainNav: Nav[];
 }
 
 export const docsConfig: DocsConfig = {
@@ -9,4 +16,14 @@ export const docsConfig: DocsConfig = {
   description:
     "Portfolio pessoal do Pedro, desenvolvedor e estudante de programação.",
   avatarIcon: "https://avatars.githubusercontent.com/u/58788062?v=4",
+  mainNav: [
+    {
+      title: "Projetos",
+      href: "/projects",
+    },
+    {
+      title: "Sobre",
+      href: "/about",
+    },
+  ],
 };
