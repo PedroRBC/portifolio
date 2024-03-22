@@ -43,8 +43,8 @@ export default function RootLayout({
           {children}
           <Footer />
         </Providers>
+        <SpeedInsights />
       </body>
-      <SpeedInsights />
     </html>
   );
 }
