@@ -16,7 +16,6 @@ export const metadata: Metadata = {
     template: "%s | " + docsConfig.siteName,
   },
   description: docsConfig.description,
-  icons: docsConfig.siteIcon,
 };
 
 export const viewport: Viewport = {
@@ -35,7 +34,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         className={cn(
-          "min-h-screen bg-background antialiased text-foreground",
+          "min-h-screen bg-background antialiased text-foreground flex flex-col",
           inter.className,
         )}
       >
