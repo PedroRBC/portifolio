@@ -4,7 +4,7 @@ import { docsConfig } from "@/config/docs";
 export default function Home() {
   return (
     <main className="container flex-1 flex items-center">
-      <section className="my-14 md:my-10 flex flex-1 flex-col lg:flex-row items-center justify-between">
+      <section className="my-10 flex flex-1 flex-col lg:flex-row items-center justify-between gap-8">
         <div className="md:w-[37rem]">
           <h1 className="text-4xl md:text-6xl font-bold whitespace-break-spaces">
             {"Oi, Me chamo\nPedro."}
