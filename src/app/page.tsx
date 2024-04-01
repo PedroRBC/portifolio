@@ -7,8 +7,7 @@ export default function Home() {
       <section className="my-14 md:my-10 flex flex-1 flex-col lg:flex-row items-center justify-between">
         <div className="md:w-[37rem]">
           <h1 className="text-4xl md:text-6xl font-bold whitespace-break-spaces">
-            Oi, Me chamo
-            {"\nPedro."}
+            {"Oi, Me chamo\nPedro."}
           </h1>
           <h2 className="text-violet-600 dark:text-violet-400 md:text-4xl my-1 font-semibold text-2xl">
             Desenvolvedor e estudante de programação.
