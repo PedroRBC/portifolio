@@ -28,7 +28,7 @@ export default function Header() {
           <Link href="/">
             <p className="text-2xl font-bold md:inline-block">
               PR
-              <span className="text-primary">.</span>
+              <span className="text-violet-600 dark:text-violet-400">.</span>
             </p>
           </Link>
           <div className="flex gap-4 items-center text-lg font-medium">

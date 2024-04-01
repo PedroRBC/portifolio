@@ -1,6 +1,6 @@
 export default function Footer() {
   return (
-    <footer className="border-t border-muted">
+    <footer className="border-t border-muted mt-12">
       <div className="mx-auto w-full max-w-screen-xl p-4">
         <div className="sm:flex sm:items-center sm:justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
