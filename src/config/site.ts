@@ -1,4 +1,11 @@
 import { Icons } from "@/components/icons";
+import { type ClassValue } from "clsx";
+
+type skill = {
+  name: string;
+  icon: keyof typeof Icons;
+  style?: ClassValue;
+};
 
 export type SiteConfig = {
   name: string;
@@ -10,9 +17,10 @@ export type SiteConfig = {
     mail: string;
   };
   skills: {
-    name: string;
-    icon: keyof typeof Icons;
-  }[];
+    leanguage: skill[];
+    framework: skill[];
+    other: skill[];
+  };
 };
 
 export const siteConfig: SiteConfig = {
@@ -25,22 +33,42 @@ export const siteConfig: SiteConfig = {
     github: "https://github.com/pedrorbc",
     mail: "mailto:contato@pedrorbc.com",
   },
-  skills: [
-    {
-      name: "React",
-      icon: "react",
-    },
-    {
-      name: "Next",
-      icon: "next",
-    },
-    {
-      name: "Typescript",
-      icon: "typeScript",
-    },
-    {
-      name: "Prisma",
-      icon: "prisma",
-    },
-  ],
+  skills: {
+    leanguage: [
+      {
+        name: "Typescript",
+        icon: "typeScript",
+        style: "w-8 h-8",
+      },
+      {
+        name: "Javacript",
+        icon: "javaScript",
+        style: "w-8 h-8",
+      },
+      {
+        name: "Go",
+        icon: "go",
+      },
+      {
+        name: "C++",
+        icon: "cplusplus",
+      },
+    ],
+    framework: [
+      {
+        name: "React",
+        icon: "react",
+      },
+      {
+        name: "Next",
+        icon: "next",
+      },
+    ],
+    other: [
+      {
+        name: "Prisma",
+        icon: "prisma",
+      },
+    ],
+  },
 };
