@@ -17,7 +17,6 @@ import { cn } from "@/lib/utils";
 export default function ProjectsPage() {
   const { width } = useWindowDimensions();
   const isMobile = (width || 1270) < 640;
-  console.log("isMobile", isMobile, width);
   return (
     <main className="container w-full flex-1 flex items-center justify-center">
       <Carousel
