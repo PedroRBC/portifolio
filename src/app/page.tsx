@@ -1,5 +1,9 @@
+import { Icons } from "@/components/icons";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { docsConfig } from "@/config/docs";
+import { Button } from "@/components/ui/button";
+import { siteConfig } from "@/config/site";
+import { Mail } from "lucide-react";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -16,11 +20,39 @@ export default function Home() {
             Morador do Interior de São Paulo, apaixonado por tecnologia e
             aprender coisas novas.
           </p>
-          <div className="mt-5 flex gap-5"></div>
+          <div className="mt-5 flex gap-5">
+            <Link
+              href={siteConfig.socials.github}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button variant="ghost">
+                <Icons.gitHub className="w-4 h-4 fill-current" />
+              </Button>
+            </Link>
+            <Link
+              href={siteConfig.socials.twitter}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button variant="ghost">
+                <Icons.twitter className="w-4 h-4 fill-current" />
+              </Button>
+            </Link>
+            <Link
+              href={siteConfig.socials.mail}
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Button variant="ghost">
+                <Mail className="w-5 h-5" />
+              </Button>
+            </Link>
+          </div>
         </div>
         <div className="flex justify-center">
           <Avatar className="w-1/2 h-1/2">
-            <AvatarImage src={docsConfig.avatarIcon} alt="@pedrorbc" />
+            <AvatarImage src={siteConfig.userIcon} alt="@pedrorbc" />
             <AvatarFallback>PR.</AvatarFallback>
           </Avatar>
         </div>
