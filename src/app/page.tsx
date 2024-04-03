@@ -6,7 +6,7 @@ export default function Home() {
     <main className="container flex-1 flex items-center">
       <section className="my-10 flex flex-1 flex-col lg:flex-row items-center justify-between gap-8">
         <div className="md:w-[37rem]">
-          <h1 className="text-4xl md:text-6xl font-bold whitespace-break-spaces">
+          <h1 className="text-4xl md:text-6xl font-bold whitespace-break-spaces transition-transform">
             {"Oi, Me chamo\nPedro."}
           </h1>
           <h2 className="text-violet-600 dark:text-violet-400 md:text-4xl my-1 font-semibold text-2xl">

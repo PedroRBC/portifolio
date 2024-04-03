@@ -22,11 +22,11 @@ export default function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-10 w-screen bg-background/50 backdrop-blur-md">
+    <header className="sticky top-0 z-10 w-full bg-background/50 backdrop-blur-md">
       <div className="container py-5">
-        <div className="h-20 flex items-center justify-between">
+        <div className="lg:h-20 flex items-center justify-between">
           <Link href="/">
-            <p className="text-2xl font-bold md:inline-block">
+            <p className="text-xl lg:text-2xl font-bold md:inline-block">
               PR
               <span className="text-violet-600 dark:text-violet-400">.</span>
             </p>
