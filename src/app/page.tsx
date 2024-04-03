@@ -20,7 +20,7 @@ export default function Home() {
             Morador do Interior de São Paulo, apaixonado por tecnologia e
             aprender coisas novas.
           </p>
-          <div className="mt-5 flex gap-5">
+          <div className="mt-5 flex gap-5 justify-center sm:justify-normal">
             <Link
               href={siteConfig.socials.github}
               target="_blank"
