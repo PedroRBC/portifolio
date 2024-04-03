@@ -1,7 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
-import { docsConfig } from "@/config/docs";
+import { siteConfig } from "@/config/site";
 
 import { GeistSans } from "geist/font/sans";
 import React from "react";
@@ -11,10 +11,10 @@ import Footer from "@/components/footer";
 import Header from "@/components/header";
 export const metadata: Metadata = {
   title: {
-    default: docsConfig.siteName,
-    template: "%s | " + docsConfig.siteName,
+    default: siteConfig.name,
+    template: "%s | " + siteConfig.name,
   },
-  description: docsConfig.description,
+  description: siteConfig.description,
 };
 
 export const viewport: Viewport = {
