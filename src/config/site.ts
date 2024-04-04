@@ -64,6 +64,10 @@ export const siteConfig: SiteConfig = {
         icon: "next",
       },
       {
+        name: "Nest.Js",
+        icon: "nestjs",
+      },
+      {
         name: "Expo",
         icon: "expo",
       },
@@ -72,6 +76,14 @@ export const siteConfig: SiteConfig = {
       {
         name: "Prisma",
         icon: "prisma",
+      },
+      {
+        name: "Firebase",
+        icon: "firebase",
+      },
+      {
+        name: "Docker",
+        icon: "docker",
       },
     ],
   },
