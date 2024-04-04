@@ -1,10 +1,10 @@
 import { Icons } from "@/components/icons";
-import { type ClassValue } from "clsx";
+import { type ClassNameValue } from "tailwind-merge";
 
 type skill = {
   name: string;
   icon: keyof typeof Icons;
-  style?: ClassValue;
+  style?: ClassNameValue;
 };
 
 export type SiteConfig = {
@@ -62,6 +62,10 @@ export const siteConfig: SiteConfig = {
       {
         name: "Next",
         icon: "next",
+      },
+      {
+        name: "Expo",
+        icon: "expo",
       },
     ],
     other: [
