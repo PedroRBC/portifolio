@@ -9,7 +9,7 @@ export const metadata = {
 export default function AboutPage() {
   return (
     <main className="container flex flex-1 justify-center">
-      <section className="flex flex-col justify-around">
+      <section className="flex items-center">
         <div className="flex flex-col items-center space-y-4">
           <h1 className="text-3xl font-bold">Habilidades</h1>
           <div className="flex gap-5 items-center justify-center flex-wrap">
@@ -54,9 +54,6 @@ export default function AboutPage() {
               );
             })}
           </div>
-        </div>
-        <div className="flex items-center">
-          <h2 className="text-xl font-mono">Em construção... 🔥🔥🔥</h2>
         </div>
       </section>
     </main>
