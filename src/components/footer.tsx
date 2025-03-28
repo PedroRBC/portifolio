@@ -4,11 +4,11 @@ export default function Footer() {
       <div className="mx-auto w-full max-w-screen-xl p-4">
         <div className="flex items-center justify-between">
           <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2024{" "}
+            Desenvolvido por{" "}
             <a href="https://pedrorbc.com/" className="hover:underline">
-              PedroRbc™
+              Pedro Rodrigues Bueno De Caldas
             </a>
-            . All Rights Reserved.
+            , 2025
           </span>
           <div className="flex space-x-5 justify-center">
             <a
