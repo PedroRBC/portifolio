@@ -22,43 +22,55 @@ export default function Header() {
   }
 
   return (
-    <header className="sticky top-0 z-10 w-full bg-background/50 backdrop-blur-md">
-      <div className="container py-5">
-        <div className="lg:h-20 flex items-center justify-between">
-          <Link href="/">
-            <p className="text-xl lg:text-2xl font-bold md:inline-block">
+    <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/80 backdrop-blur-lg px-6">
+      <div className="container py-4">
+        <div className="flex items-center justify-between">
+          <Link href="/" className="group">
+            <p className="text-xl lg:text-2xl font-bold">
               PR
-              <span className="text-violet-600 dark:text-violet-400">.</span>
+              <span className="text-violet-600 dark:text-violet-400 transition-colors group-hover:text-violet-500">
+                .
+              </span>
             </p>
           </Link>
-          <div className="flex gap-4 items-center text-lg font-medium">
-            <Link href="/">
-              <p
-                className={cn(
-                  pathname === "/" ? "text-foreground" : "text-foreground/60",
-                )}
-              >
-                Home
-              </p>
+          <nav className="flex gap-1 items-center">
+            <Link
+              href="/"
+              className={cn(
+                "rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
+                pathname === "/"
+                  ? "text-foreground bg-accent"
+                  : "text-muted-foreground hover:text-foreground hover:bg-accent/50",
+              )}
+            >
+              Home
             </Link>
             {docsConfig.mainNav.map((nav) => (
-              <Link key={nav.href} href={nav.href}>
-                <p
-                  className={cn(
-                    pathname.startsWith(nav.href)
-                      ? "text-foreground"
-                      : "text-foreground/60",
-                  )}
-                >
-                  {nav.title}
-                </p>
+              <Link
+                key={nav.href}
+                href={nav.href}
+                className={cn(
+                  "rounded-md px-3 py-1.5 text-sm font-medium transition-colors",
+                  pathname.startsWith(nav.href)
+                    ? "text-foreground bg-accent"
+                    : "text-muted-foreground hover:text-foreground hover:bg-accent/50",
+                )}
+              >
+                {nav.title}
               </Link>
             ))}
-            <Button variant="ghost" onClick={toggleTheme} size="icon">
+            <div className="ml-2 h-5 w-px bg-border" />
+            <Button
+              variant="ghost"
+              onClick={toggleTheme}
+              size="icon"
+              className="ml-1"
+            >
               <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />
               <Moon className="absolute h-[1.2rem] w-[1.2rem] rotate-90 scale-0 transition-all dark:rotate-0 dark:scale-100" />
+              <span className="sr-only">Alternar tema</span>
             </Button>
-          </div>
+          </nav>
         </div>
       </div>
     </header>

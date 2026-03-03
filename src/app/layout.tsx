@@ -30,7 +30,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="pt-BR" suppressHydrationWarning>
       <body
         className={cn(
           "min-h-screen w-screen bg-background font-sans antialiased text-foreground flex flex-col",
@@ -39,7 +39,9 @@ export default function RootLayout({
       >
         <Providers>
           <Header />
-          {children}
+          <div className="px-6" >
+            {children}
+          </div>
           <Footer />
         </Providers>
       </body>

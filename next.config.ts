@@ -1,5 +1,6 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
+import type { NextConfig } from "next";
+
+const nextConfig: NextConfig = {
   redirects() {
     return [
       process.env.MAINTENANCE_MODE === "true"
@@ -9,7 +10,7 @@ const nextConfig = {
             permanent: false,
           }
         : null,
-    ].filter(Boolean);
+    ].filter(Boolean) as any;
   },
 };
 

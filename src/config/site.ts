@@ -24,7 +24,7 @@ export type SiteConfig = {
 };
 
 export const siteConfig: SiteConfig = {
-  name: "Pedro R.",
+  name: "Pedro Rbc",
   description:
     "Portfolio pessoal do Pedro, desenvolvedor e estudante de programação.",
   userIcon: "https://github.com/pedrorbc.png",
@@ -41,7 +41,7 @@ export const siteConfig: SiteConfig = {
         style: "w-8 h-8",
       },
       {
-        name: "Javacript",
+        name: "JavaScript",
         icon: "javaScript",
         style: "w-8 h-8",
       },

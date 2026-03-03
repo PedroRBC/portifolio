@@ -1,0 +1,42 @@
+{
+  "env": {
+    "ANTHROPIC_BASE_URL": "https://go.trybons.ai",
+    "ANTHROPIC_AUTH_TOKEN": "sk_cr_AWvvvQJgP6mqAzdbGtRD5eDvLUKd7c9dbWjsg7KoVdmR"
+  },
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc:*)",
+      "mcp__shadcn__get_project_registries",
+      "mcp__shadcn__list_items_in_registries",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(npm install:*)",
+      "WebFetch(domain:www.prisma.io)",
+      "Bash(npm uninstall:*)",
+      "WebSearch",
+      "WebFetch(domain:www.npmjs.com)",
+      "Bash(npx prisma generate:*)",
+      "Bash(npx next:*)",
+      "Bash(bun fix-wear.ts)",
+      "Bash(npx shadcn@latest init --yes --defaults)",
+      "Bash(ls *)",
+      "Edit(*)",
+      "Bash(npx shadcn@latest add button input textarea label tabs dialog sheet card badge toast sonner separator scroll-area avatar --yes)",
+      "Bash(npx shadcn@latest add button input textarea label tabs dialog sheet card badge sonner separator scroll-area avatar --yes)",
+      "Bash(npm run build)",
+      "Bash(node -e \"console.log\\(require\\(''./node_modules/@ai-sdk/react/package.json''\\).version\\)\")",
+      "Bash(grep -n \"initialMessages\" /c/Users/pedri/Documents/Projetos/AiCharacters/frontend/src/app/characters/[id]/chat/page.tsx)",
+      "WebFetch(domain:candy.ai)",
+      "WebFetch(domain:www.aitoolgo.com)",
+      "WebFetch(domain:exploregirls.com)",
+      "Bash(where python)",
+      "Bash(where python3)",
+      "Bash(where py)",
+      "Bash(C:/Python314/python.exe -c \":*)",
+      "Bash(__NEW_LINE_4dae76d893a66635__ echo \"\")",
+      "Bash(__NEW_LINE_d377742cbfa5e11f__ echo \"\")",
+      "Bash(grep -n \"conversations/\\\\[id\\\\]/messages\" src/app/api/conversations/[id]/messages/[messageId]/route.ts)",
+      "Bash(python3 -c \":*)",
+      "Bash(node -e \":*)"
+    ]
+  }
+}
