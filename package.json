@@ -2,10 +2,14 @@
   "name": "portifolio",
   "version": "0.1.0",
   "private": true,
+  "packageManager": "bun@1.4.2",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "dev": "bun run --bun next dev",
+    "build": "bun run --bun next build",
+    "start": "bun run --bun next start",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix"
   },
