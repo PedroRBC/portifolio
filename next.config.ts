@@ -1,16 +1,17 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  redirects() {
+  async redirects() {
+    if (process.env.MAINTENANCE_MODE !== "true") return [];
+
     return [
-      process.env.MAINTENANCE_MODE === "true"
-        ? {
-            source: "/((?!maintenance).*)",
-            destination: "/maintenance",
-            permanent: false,
-          }
-        : null,
-    ].filter(Boolean) as any;
+      {
+        source:
+          "/((?!maintenance(?:/|$)|homecare/(?:privacy|data-deletion)/?$).*)",
+        destination: "/maintenance",
+        permanent: false,
+      },
+    ];
   },
 };
 
