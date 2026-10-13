@@ -1,9 +1,16 @@
-FROM node:20-slim
+FROM oven/bun:1.4.3 AS bun
 
-WORKDIR /home/node/app
+FROM node:24-bookworm-slim
 
-# Necessary for Gpg Sign in Devcontainer
-RUN apt update && apt install --no-install-recommends -y \
-        git gpg gnupg gpg-agent socat
+WORKDIR /workspaces
 
-CMD ["tail", "-f", "/dev/null"]
+COPY --from=bun /usr/local/bin/bun /usr/local/bin/bun
+
+# Git and GPG are used for signed commits in the dev container.
+RUN apt-get update && apt-get install --no-install-recommends -y \
+    git \
+    gnupg \
+    socat \
+    && rm -rf /var/lib/apt/lists/*
+
+CMD ["sleep", "infinity"]
