@@ -1,6 +1,10 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @theme inline {
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
   --color-background: hsl(var(--background));
   --color-foreground: hsl(var(--foreground));
   --color-card: hsl(var(--card));
@@ -20,76 +24,90 @@
   --color-border: hsl(var(--border));
   --color-input: hsl(var(--input));
   --color-ring: hsl(var(--ring));
-
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
-
-  --animate-accordion-down: accordion-down 0.2s ease-out;
-  --animate-accordion-up: accordion-up 0.2s ease-out;
-}
-
-@keyframes accordion-down {
-  from {
-    height: 0;
-  }
-  to {
-    height: var(--radix-accordion-content-height);
-  }
-}
-
-@keyframes accordion-up {
-  from {
-    height: var(--radix-accordion-content-height);
-  }
-  to {
-    height: 0;
-  }
 }
 
 @layer base {
   :root {
-    --background: 0 0% 98%;
-    --foreground: 0 0% 3.9%;
-    --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
-    --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
-    --radius: 0.5rem;
+    --background: 60 14% 97%;
+    --foreground: 150 8% 10%;
+    --card: 60 10% 99%;
+    --card-foreground: 150 8% 10%;
+    --popover: 60 10% 99%;
+    --popover-foreground: 150 8% 10%;
+    --primary: 79 80% 28%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 60 8% 91%;
+    --secondary-foreground: 150 8% 16%;
+    --muted: 60 8% 92%;
+    --muted-foreground: 150 5% 39%;
+    --accent: 79 60% 88%;
+    --accent-foreground: 150 8% 10%;
+    --destructive: 0 70% 44%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 60 6% 83%;
+    --input: 60 6% 83%;
+    --ring: 79 80% 28%;
+    --radius: 0.75rem;
   }
 
   .dark {
-    --background: 0 0% 1%;
-    --foreground: 0 0% 98%;
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
+    --background: 150 7% 6%;
+    --foreground: 60 9% 94%;
+    --card: 150 5% 9%;
+    --card-foreground: 60 9% 94%;
+    --popover: 150 5% 9%;
+    --popover-foreground: 60 9% 94%;
+    --primary: 79 86% 68%;
+    --primary-foreground: 150 10% 8%;
+    --secondary: 150 4% 14%;
+    --secondary-foreground: 60 9% 94%;
+    --muted: 150 4% 13%;
+    --muted-foreground: 90 4% 63%;
+    --accent: 79 14% 17%;
+    --accent-foreground: 79 86% 68%;
+    --destructive: 0 75% 64%;
+    --destructive-foreground: 150 7% 6%;
+    --border: 150 4% 19%;
+    --input: 150 4% 24%;
+    --ring: 79 86% 68%;
+  }
+
+  * { border-color: hsl(var(--border)); }
+  html { scroll-behavior: smooth; scroll-padding-top: 6rem; }
+  body { overflow-wrap: break-word; }
+  ::selection { background: hsl(var(--primary)); color: hsl(var(--primary-foreground)); }
+  :focus-visible { outline: 2px solid hsl(var(--ring)); outline-offset: 5px; }
+  button:not(:disabled), select { cursor: pointer; }
+  svg { flex-shrink: 0; }
+}
+
+@layer components {
+  .site-container { @apply mx-auto w-full max-w-6xl px-5 sm:px-8 lg:px-10; }
+  .eyebrow { @apply font-mono text-[11px] uppercase tracking-[0.18em] text-muted-foreground; }
+  .section-title { @apply text-3xl font-medium tracking-tight sm:text-4xl lg:text-5xl; }
+  .text-link { @apply inline-flex items-center gap-2 text-sm font-medium transition-colors hover:text-primary; }
+  .field { @apply min-h-11 rounded-lg border border-input bg-card px-3 text-sm text-foreground focus-visible:border-primary; }
+  .project-art {
+    background-image: linear-gradient(hsl(var(--border) / 0.35) 1px, transparent 1px), linear-gradient(90deg, hsl(var(--border) / 0.35) 1px, transparent 1px);
+    background-size: 34px 34px;
+  }
+  .reveal { animation: reveal 650ms ease-out both; }
+}
+
+@keyframes reveal {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
   }
 }

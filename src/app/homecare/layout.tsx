@@ -6,7 +6,7 @@ export default function HomeCareLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="mx-auto max-w-3xl py-10 sm:py-16">
+    <main className="mx-auto max-w-3xl px-5 py-10 sm:px-8 sm:py-16">
       <nav
         aria-label="Documentos do HomeCare"
         className="mb-10 flex flex-wrap items-center gap-x-6 gap-y-3 border-b pb-6 text-sm"
