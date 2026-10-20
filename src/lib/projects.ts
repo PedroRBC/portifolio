@@ -14,6 +14,10 @@ export type Repository = {
 
 export type RepositorySort = "updated" | "name" | "stars";
 
+export function getSelectedRepository(repositories: Repository[], selectedId: number | null): Repository | null {
+  return repositories.find((repository) => repository.id === selectedId) ?? repositories[0] ?? null;
+}
+
 export function getSafeHttpUrl(value: unknown): string | null {
   if (typeof value !== "string" || value.trim() === "") return null;
 

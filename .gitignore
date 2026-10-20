@@ -36,3 +36,12 @@ yarn-error.log*
 next-env.d.ts
 
 .env
+
+# local design previews and verification artifacts
+/.superpowers/
+/.impeccable/mocks/
+/.impeccable/review/
+/.impeccable/build/
+/.impeccable/project-index-brief.md
+/.gstack/*
+!/.gstack/pregate.json
