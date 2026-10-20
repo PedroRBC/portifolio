@@ -1,0 +1,29 @@
+{
+  "$schema": "https://github.com/garrytan/gstack/docs/pregate.md#pregate-v1",
+  "runner": "bun test {files}",
+  "dependencies": {
+    "src/**": [
+      "src/lib/github.test.ts",
+      "src/lib/projects.test.ts",
+      "src/components/projects/project-index.test.tsx",
+      "src/config/site.test.ts"
+    ],
+    ".gstack/pregate.json": [
+      "src/lib/github.test.ts",
+      "src/lib/projects.test.ts",
+      "src/components/projects/project-index.test.tsx",
+      "src/config/site.test.ts"
+    ]
+  },
+  "guards": [
+    {
+      "id": "next-production-validation",
+      "when": ["src/**", "package.json", "bun.lock", ".gstack/pregate.json"],
+      "command": "bun run lint && bun run typecheck && bun run build",
+      "timeout_s": 180
+    }
+  ],
+  "strays": {
+    "allow": [".gstack/", ".impeccable/", "docs/"]
+  }
+}

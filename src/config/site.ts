@@ -16,7 +16,10 @@ export const siteConfig = {
   github: {
     username: "PedroRBC",
     keyword: "portfolio",
-    featured: ["habits", "PalDex", "paldex-api", "ValorantDex"],
+    featured: ["HomeCare", "habits", "PalDex", "paldex-api", "ValorantDex"],
+    banners: {
+      homecare: "https://raw.githubusercontent.com/PedroRBC/HomeCare/master/docs/google-play/assets/feature-graphic-1024x500.png",
+    } as Readonly<Record<string, string>>,
   },
   socials: {
     twitter: "https://twitter.com/pedrinhorbc",

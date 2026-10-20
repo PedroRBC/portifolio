@@ -1,0 +1,45 @@
+{
+  "buildPath": "code",
+  "detector": {
+    "ignoreRules": [],
+    "ignoreFiles": [],
+    "ignoreValues": [
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/contact-sheet.html"
+        ],
+        "createdAt": "2026-10-20T16:13:00.436Z",
+        "reason": "Assistant reviewed rendered mockup: cover lettering is centered or deliberately positioned with visible clearance; full-bleed project artwork is not a text container. Static detector does not resolve flex alignment or absolute caption offsets."
+      },
+      {
+        "rule": "cramped-padding",
+        "value": "*",
+        "files": [
+          ".impeccable/mocks/decision/project-index.html"
+        ],
+        "createdAt": "2026-10-20T16:13:00.442Z",
+        "reason": "Assistant reviewed rendered mockup: artwork title and screenshot are centered with generous clearance in the full-bleed preview. No text touches its boundary; detector does not resolve flex positioning."
+      },
+      {
+        "rule": "design-system-font",
+        "value": "manrope",
+        "files": [
+          ".impeccable/mocks/decision/contact-sheet.html"
+        ],
+        "createdAt": "2026-10-20T16:46:13.803Z",
+        "reason": "Assistant: archived unchosen direction A intentionally preserves its original comparison typography; not shipping UI."
+      },
+      {
+        "rule": "design-system-font",
+        "value": "barlow condensed",
+        "files": [
+          ".impeccable/mocks/decision/contact-sheet.html"
+        ],
+        "createdAt": "2026-10-20T16:46:13.820Z",
+        "reason": "Assistant: archived unchosen direction A intentionally preserves its original comparison typography; not shipping UI."
+      }
+    ]
+  }
+}
